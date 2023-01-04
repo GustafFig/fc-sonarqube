@@ -5,9 +5,17 @@ jobs:
   check-application:
     runs-on: ubuntu-20.04
     steps:
-     - uses: actions/checkout@v2
-     - uses: actions/setup-node@v3
-       with:
-         node-version: 16
-     - run: npm ci
-     - run: npm test
+      - uses: actions/checkout@v2
+        with:
+            fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm test
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
