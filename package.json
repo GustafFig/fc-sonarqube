@@ -1,0 +1,27 @@
+{
+  "name": "fc-sonarqube",
+  "version": "1.0.0",
+  "description": "Nesse desafio, iremos consolidar os conhecimentos em relação a criação de uma pipeline de CI realizando os seguintes passos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustafFig/fc-sonarqube.git"
+  },
+  "author": "Gustavo Figueiredo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GustafFig/fc-sonarqube/issues"
+  },
+  "homepage": "https://github.com/GustafFig/fc-sonarqube#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@types/jest": "^29.2.5",
+    "babel-jest": "^29.3.1",
+    "jest": "^29.3.1",
+    "typescript": "^4.9.4"
+  }
+}
